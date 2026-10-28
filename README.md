@@ -2,8 +2,11 @@
 
 > **Status:**
  - Desafio 1 Concluído ✅  
+ - Desafio 2 Concluído ✅  
 > **Curso / Evento:** Imersão de Engenharia de Software com IA — **Alura**  
-> **Foco de Aprendizado:** Google AI Studio (Ambiente & Capacidades)  
+
+> **Foco de Aprendizado:** Google AI Studio (Ambiente & Capacidades) / Antigravity
+
 > **Linguagem Utilizada:** Python 3.8+
 
 ---
@@ -30,6 +33,20 @@ O objetivo central da imersão foi mergulhar nas tecnologias e ferramentas avan�
 
 ---
 
+## 🚀 Conceitos e Aprendizados sobre o Google Antigravity
+
+- Na segunda etapa da Imersão, aprofundamos no **Antigravity**, a plataforma e assistente de desenvolvimento agêntico do Google. Os principais conceitos consolidados foram:
+
+| Conceito / Recurso do Antigravity | Aplicação Prática no Ciclo de Desenvolvimento |
+| :--- | :--- |
+| **Assistência Agêntica Autônoma** | Capacidade do agente de ler o contexto do repositório, inspecionar código existente, propor planos e executar alterações pontuais sem perder a estrutura original. |
+| **Execução Segura e Testes Automatizados** | Criação e execução de baterias de testes automatizados (unittest), simulando entradas de usuário e validando edge cases (divisão por zero, porcentagens e entradas inválidas). |
+| **Ambiente Híbrido (Terminal / Sandbox)** | Compreensão do isolamento seguro de ferramentas e comandos locais, permitindo gerenciar dependências, ambiente de execução e ferramentas do sistema operacional. |
+| **Governança de Código com Git e .gitignore** | Criação e manutenção de políticas de arquivos ignorados (.gitignore), garantindo um repositório limpo e sem artefatos temporários ou caches (__pycache__, .venv). |
+| **Evolução Iterativa de Features** | Expansão incremental do software (como a implementação da operação de porcentagem %), respeitando a arquitetura modular e os padrões PEP 8 já estabelecidos. |
+
+---
+
 ## ✨ O Software Desenvolvido: Calculadora em Python
 
 Como resultado das instruções e refinamentos trabalhados no Google AI Studio, foi gerada uma calculadora funcional com:
@@ -37,6 +54,44 @@ Como resultado das instruções e refinamentos trabalhados no Google AI Studio, 
 - Tratamento preventivo contra divisão por zero (`ZeroDivisionError`).
 - Blindagem contra entradas inválidas de texto (`try...except ValueError`).
 - Funções desacopladas com `def`, retorno via `return` e ponto de entrada seguro `if __name__ == "__main__":`.
+
+---
+
+## 💻 Como Executar o Projeto
+
+### Pré-requisitos
+- **Python 3.8+** instalado no ambiente ([python.org](https://www.python.org/downloads/)).
+- **Git** configurado na máquina (opcional, para controle de versão).
+
+### 1. Clonar o Repositório
+```bash
+git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+cd imersao-alura
+```
+
+### 2. Executar a Calculadora
+Execute o script interativo através do terminal:
+
+```bash
+# No Windows:
+python src/calculadora.py
+# ou:
+py src/calculadora.py
+
+# No Linux/macOS:
+python3 src/calculadora.py
+```
+
+### 3. Executar os Testes Automatizados
+O projeto conta com uma suíte de testes unitários (unittest) que valida todas as operações e fluxos de entrada da CLI:
+
+```bash
+# No Windows:
+python -m unittest tests/test_calculadora.py
+
+# No Linux/macOS:
+python3 -m unittest tests/test_calculadora.py
+```
 
 ---
 

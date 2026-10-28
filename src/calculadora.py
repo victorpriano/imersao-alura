@@ -24,6 +24,10 @@ def dividir(a, b):
         return "Erro: Não é possível dividir por zero!"
     return a / b
 
+def porcentagem(a, b):
+    """Retorna b por cento de a (a * b / 100)."""
+    return (a * b) / 100
+
 # 2. Função Principal do Programa
 def main():
     print("=" * 36)
@@ -34,6 +38,7 @@ def main():
     print("  - : Subtração")
     print("  * : Multiplicação")
     print("  / : Divisão")
+    print("  % : Porcentagem")
     print("-" * 36)
 
     try:
@@ -41,7 +46,7 @@ def main():
         num1 = float(input("Digite o primeiro número: "))
         
         # Escolha da operação
-        operacao = input("Escolha a operação (+, -, *, /): ").strip()
+        operacao = input("Escolha a operação (+, -, *, /, %): ").strip()
         
         # Entrada do segundo número
         num2 = float(input("Digite o segundo número: "))
@@ -55,8 +60,10 @@ def main():
             resultado = multiplicar(num1, num2)
         elif operacao == "/":
             resultado = dividir(num1, num2)
+        elif operacao == "%":
+            resultado = porcentagem(num1, num2)
         else:
-            print("Operação inválida! Use apenas +, -, * ou /.")
+            print("Operação inválida! Use apenas +, -, *, / ou %.")
             return
 
         # Exibição do resultado usando f-strings
